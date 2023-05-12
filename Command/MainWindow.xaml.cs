@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace DataContext
+namespace Command
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -23,13 +23,6 @@ namespace DataContext
         public MainWindow()
         {
             InitializeComponent();
-            grid.DataContext = new BindingObject("Test1");
-
         }
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            (grid.DataContext as BindingObject).Temp = "TTTT";
-        }
-
     }
 }
