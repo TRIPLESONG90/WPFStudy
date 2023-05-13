@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.Specialized;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
 
@@ -35,6 +37,8 @@ namespace Command
         public MainWindowViewModel()
         {
             _lib = new Library();
+
+
         }
 
 
@@ -51,6 +55,10 @@ namespace Command
         private void Load(object obj)
         {
             Items = new ListCollectionView(_lib.GetPeople());
+
+            //Items.SortDescriptions.Add(new SortDescription("Age", ListSortDirection.Descending));
+            //Items.Filter = new Predicate<object>(x => (x as Person).Age == 23 || (x as Person).Name == "하1");
+            //Items.GroupDescriptions.Add(new PropertyGroupDescription("Age"));
         }
 
 

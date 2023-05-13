@@ -28,7 +28,7 @@ namespace Command
                     new Person()
                     {
                         Name = $"하{i}",
-                        Age = i
+                        Age = i  %10
                     }
                 );
             }
